@@ -1,0 +1,387 @@
+<div class="container-fluid">
+   
+  <div class="row profile-navbar">
+    <div class="col-md-12 ml-auto padding-0">
+      <div class="profile-tabs">
+        <ul class="tabs-holder">
+          <!--<li class="tab"><a href="#" [routerLink]="['/app/dashboard']">Dashboard</a></li>-->
+          <li class="tab"><a href="#" class="selected" [routerLink]="['/app/students-list']">Home</a></li>
+          <!-- <li class="tab"><a href="#" [routerLink]="['/app/profile']">Profile</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+ 
+ 
+    <!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+    <li data-target="#multi-item-example" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+
+      <div class="col-md-4">
+        <div class="card mb-2" >
+          <img class="card-img-top"
+            src="assets/icons/card1.jpeg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Available routes</h4>
+          
+            <a class="btn btn-primary" (click)="routeview()">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-2" >
+          <img class="card-img-top"
+            src="assets/icons/card2.jpeg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Truck rate card</h4>
+            
+            <a class="btn btn-primary" (click)="truckview()">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="assets/icons/card3.jpeg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">weekly/yearly trends</h4>
+            
+            <a class="btn btn-primary" (click)="ltl()">View</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item">
+
+      <div class="col-md-4">
+        <div class="card mb-2" >
+          <img class="card-img-top"
+            src="assets/icons/card4.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Fuel prices</h4>
+           
+            <a class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="assets/icons/card5.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Market prices</h4>
+            
+            <a class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="assets/icons/card6.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Load vs Truck ratios</h4>
+            
+            <a class="btn btn-primary" (click)="chartview()">View</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.Second slide-->
+
+    <div class="carousel-item">
+
+      <div class="col-md-4">
+        <div class="card mb-2" >
+          <img class="card-img-top"
+            src="assets/icons/card1.jpeg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Available routes</h4>
+          
+            <a class="btn btn-primary" (click)="routeview()">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-2" >
+          <img class="card-img-top"
+            src="assets/icons/card2.jpeg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Truck rate card</h4>
+            
+            <a class="btn btn-primary" (click)="truckview()">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="assets/icons/card3.jpeg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">weekly/yearly trends</h4>
+            
+            <a class="btn btn-primary" (click)="ltl()">View</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.First slide-->
+
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
+   
+  
+
+  <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Analysis in progress...</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <!-- <h3>Modal Body</h3> -->
+                <span class="mb-3" *ngIf="progressStage1">Analysing education quality...</span>
+                <span class="mb-3" *ngIf="progressStage2">Analysing infrastructure facilities...</span>
+                <span class="mb-3" *ngIf="progressStage3">Analysing research opportunities..</span>
+                <span class="mb-3" *ngIf="progressStage4">Prophet prediction completed!!</span>
+                <img *ngIf="progressStage4" src="assets/icons/idea.svg" class="mt-3" height="80" width="auto" />
+                <img *ngIf="!progressStage4" src="assets/loader-heavy.svg" height="100" width="auto" />
+            </div>
+            <div class="modal-footer">
+                <span class="report" *ngIf="flag">Check your results</span>
+                <button *ngIf="progressStage4" type="button" class="btn btn-default" data-dismiss="modal" (click)="getDataBasedOnAll()">Click Here</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="historyModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">History of Predictions</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <!-- <h3>Modal Body</h3> -->
+                <div class="row" [@cardAnimation3]>
+                    <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Prediction Date</th>
+                                    <th>Prediction Status</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let prediction of predictionDetails">
+                                    <td class="subject-name-col">
+                                        <!-- <img class="profile-image" src="assets/icons/student.svg"> -->
+                                        <!--  {{mark?.subject_name}} -->
+                                        <span>{{prediction?.date}}</span>
+                                    </td>
+                                    <td> <span class="badge status-{{prediction?.status}}" *ngIf="prediction?.status">{{prediction?.status}}</span>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span>Did we predict accurately for you?</span>
+                    </div>
+                    <div class="col-md-8 button-row">
+                        <button class="button custom-btn yes" data-dismiss="modal" (click)="showSuccess()">
+                                    Yes
+                                  </button>
+                        <button class="button custom-btn no" data-dismiss="modal" (click)="showFailure()">
+                                    No
+                                  </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="row mb-4">
+
+
+    <div class="ranking-holder">
+      
+      <div class="left-section pl-4 pr-4" [@cardAnimation1]>
+        <div class="card table-wrapper mt-4">
+          <div class="chart" *ngIf="ischart">
+            <bubble></bubble>
+          </div>
+          <div class="chart2" *ngIf="isltl">
+            <bar-chart></bar-chart>
+          </div>  
+      
+          <h3 class="heading" *ngIf="isroute">{{source}} To {{dest}} estimated tariffs for {{weight}}kg load</h3>
+        
+          <!--<button class="button upload-button" class="button upload-button" data-toggle="modal" data-target="#largeModal" (click)="showPrediction();">Predict 2K19</button>-->
+          <button *ngIf="isAdmin == 'true'" class="button upload-button">Upload Data</button>
+          <input *ngIf="isAdmin == 'true'" type="file" class="button upload-button transparent" (change) = "uploadFile()" >
+          <table class="table table-bordered" *ngIf="isroute">
+            <thead>
+              <tr>
+                <th scope="col">Route</th>
+                <th scope="col">Hubs</th>
+                
+                <th scope="col">Tariff</th>
+                <th scope="col">Distance</th>
+                <th scope="col">Duration</th>
+
+              </tr>
+
+            </thead>
+            <tbody>
+              <tr class="cursor-pointer" *ngFor="let institution of institutionList; let i = index;"
+                (click)="openDetailsOnRight(institution)">
+                <td scope="row">{{institution?.rank}}</td>
+                <td><p *ngFor="let hub of institution.parameters;">{{hub?.name}},</p></td>
+                <td>{{institution?.code}}</td>
+                <td>{{institution?.dist}}</td>
+                <td>{{institution?.time}}</td>
+              </tr>
+              <tr *ngIf="institutionList?.length == 0 && isLoaded">
+                <td colspan="4" class="table-no-data">
+                  No data available to display
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table-responsive-md" *ngIf="istruck">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Type of truck</th>
+                  <th scope="col">Max weight</th>
+                  <th scope="col">0-5km</th>
+                  <th scope="col">6-20km</th>
+                  <th scope="col">21-50km</th>
+                  <th scope="col">Above 50km</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let truck of trucks;">
+                  <th scope="row">{{truck?.type}}</th>
+                  <td>{{truck?.r1}}</td>
+                  <td>{{truck?.r2}}</td>
+                  <td>{{truck.r3}}</td>
+                  <td>{{truck.r4}}</td>
+                  <td>{{truck.r5}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="right-section padding-0" [class.show]="isRightSectionOpen">
+        <div class="card margin-0 map-wrapper" *ngIf="isRightSectionOpen" [@slideInFromRight]>
+          <div class="close-icon" (click)="closeDetailsOnRight()" *ngIf="isRightSectionOpen">
+            <img class="close-image" src="assets/icons/close.svg">
+          </div>
+
+          <div class="header">
+            Tariff trends for next one week
+          </div>
+          <div class="progress-container special-margin" *ngIf="selectedInstitution">
+              <!--<div class="progress-card" >
+                  <okr-progress-bar-circle [setValue]="selectedInstitution?.education" [size]="85"></okr-progress-bar-circle>
+                  <h5 class="text">Education</h5>
+              </div>
+              <div class="progress-card" >
+                  <okr-progress-bar-circle [setValue]="selectedInstitution?.entrepreneurship" [size]="85"></okr-progress-bar-circle>
+                  <h5 class="text">Entrepreneurship</h5>
+              </div>
+              <div class="progress-card" >
+                  <okr-progress-bar-circle [setValue]="selectedInstitution?.research" [size]="85"></okr-progress-bar-circle>
+                  <h5 class="text">Research</h5>
+              </div>
+              <div class="progress-card" >
+                  <okr-progress-bar-circle [setValue]="selectedInstitution?.infrastructure" [size]="85"></okr-progress-bar-circle>
+                  <h5 class="text">Infrastructure</h5>
+              </div>-->
+              <dashboard-chart></dashboard-chart>
+              
+            </div>
+
+          <div class="map-area">
+           
+            
+          </div>
+
+          
+
+
+
+
+        </div>
+
+
+      </div>
+      <img *ngIf="!isRightSectionOpen" src="assets/icons/ChDelRoute2.png" width="600px">
+    </div>
+
+
+  </div>
+</div>

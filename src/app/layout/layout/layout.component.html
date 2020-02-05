@@ -1,0 +1,41 @@
+
+<div class="">
+  <div class="container-fluid navbar">
+      <div class="logo cursor-pointer" (click)="navigateToHome()">
+         Logistics AI
+          <span class="title">Prediction of tariff</span>
+          
+      </div>
+            <div class="icons-holder">
+        
+
+        <div class="dropdown" *ngIf="isAdmin == 'true'">
+            <!-- <button class="btn btn-secondary dropdown-toggle" type="button" >
+              Dropdown button
+            </button> -->
+            <a id="dropdownMenuButton" class="cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="assets/icons/student-m.svg" height="30px" width="auto" >
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#" (click)="logout()">Logout</a>
+              
+            </div>
+          </div>
+          
+          <span class="title-admin">ADMIN </span>
+          <img *ngIf="isAdmin != 'true'" src="assets/icons/login1.svg" height="35px" width="auto" (click)="redirectToLogin()">
+      </div>
+    
+
+
+
+      
+  </div>
+
+  <div class="container-fluid main-content">
+      <router-outlet></router-outlet>
+  </div>
+  
+
+</div>
+
